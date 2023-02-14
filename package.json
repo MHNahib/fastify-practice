@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^4.13.0"
+    "fastify": "^4.13.0",
+    "http-status-codes": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

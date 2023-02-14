@@ -1,4 +1,6 @@
 const Fastify = require("fastify");
+const { StatusCodes } = require("http-status-codes/build/cjs/status-codes");
+const response = require("./src/utils/response");
 
 const fastify = Fastify({
   logger: true,
@@ -9,9 +11,15 @@ const port = process.env.PORT || 5000;
 
 // get
 fastify.get("/", (req, res) => {
-  res.send({
-    say: "Hello world",
-  });
+  response(
+    res,
+    StatusCodes.ACCEPTED,
+    true,
+    {
+      say: "Hello world",
+    },
+    "Success"
+  );
 });
 
 // listen on port
